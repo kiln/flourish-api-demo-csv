@@ -4,7 +4,7 @@
     <title>Flourish API: CSV Example</title>
     <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
-    <script src="https://cdn.flourish.rocks/flourish-live-v4.min.js"></script>
+    <script src="https://cdn.flourish.rocks/flourish-live-v5.min.js"></script>
   </head>
 
   <body>
@@ -13,13 +13,13 @@
     d3.csv("example-data.csv").then(function(raw_data) {
       var my_visualisation = new Flourish.Live({
         template: "@flourish/scatter",
-        version: "4",
+        version: "22",
         container: "#chart",
         api_key: "************ YOUR API KEY GOES HERE! ************",
         state: {
           layout: {
             title: "This chart was generated from an external CSV file",
-            subtitle: "The CSV file was imported from Google Sheets using D3, and turned into a chart using the Flourish API"
+            subtitle: "The CSV file was imported from a local csv using D3, and turned into a chart using the Flourish API"
           }
         },
         data: {
